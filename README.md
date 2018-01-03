@@ -1,2 +1,2 @@
 # tiny-router
-a tiny react-router, have fun!
+a tiny router for react, have fun!

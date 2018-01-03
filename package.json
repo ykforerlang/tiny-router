@@ -1,8 +1,8 @@
 {
-  "name": "tiny-router",
+  "name": "tinyy-router",
   "version": "1.0.0",
   "description": "a tiny router for react",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "babel src --out-dir lib"
