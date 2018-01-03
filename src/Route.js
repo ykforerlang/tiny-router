@@ -46,7 +46,7 @@ class Route extends Component {
 
     render() {
         const { match } = this.state
-        if(!match) return
+        if(!match) return null
 
         const { children, component, render } = this.props
 

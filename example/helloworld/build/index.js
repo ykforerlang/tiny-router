@@ -10275,6 +10275,9 @@ var Route = function (_Component) {
         key: 'render',
         value: function render() {
             var match = this.state.match;
+
+            if (!match) return null;
+
             var _props2 = this.props,
                 children = _props2.children,
                 component = _props2.component,
@@ -10282,15 +10285,13 @@ var Route = function (_Component) {
 
             if (component) {
                 var Comp = component;
-                return match ? _react2.default.createElement(Comp, { match: match }) : null;
+                return _react2.default.createElement(Comp, { match: match });
             }
             if (render) {
-                return match ? render({
-                    match: match
-                }) : null;
+                return render({ match: match });
             }
 
-            return _react2.default.Children.only(children);
+            return _react2.default.cloneElement(_react2.default.Children.only(children), { match: match });
         }
     }]);
 
@@ -10300,6 +10301,7 @@ var Route = function (_Component) {
 Route.propTypes = {
     path: _propTypes2.default.string,
     component: _propTypes2.default.func,
+    render: _propTypes2.default.func,
     exact: _propTypes2.default.bool,
     strict: _propTypes2.default.bool
 };
@@ -12372,11 +12374,7 @@ var matchPath = exports.matchPath = function matchPath(pathname, props, pathReAn
     var _props$path = props.path,
         path = _props$path === undefined ? '/' : _props$path,
         _props$exact = props.exact,
-        exact = _props$exact === undefined ? false : _props$exact,
-        _props$strict = props.strict,
-        strict = _props$strict === undefined ? false : _props$strict,
-        _props$sensitive = props.sensitive,
-        sensitive = _props$sensitive === undefined ? false : _props$sensitive;
+        exact = _props$exact === undefined ? false : _props$exact;
     var re = pathReAndKeys.re,
         keys = pathReAndKeys.keys;
 
@@ -12865,9 +12863,10 @@ var Link = function (_Component) {
 
             if (onClick) {
                 onClick(e);
-            } else {
-                _history2.default.push(to);
             }
+
+            e.preventDefault();
+            _history2.default.push(to);
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 

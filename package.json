@@ -1,6 +1,6 @@
 {
   "name": "tinyy-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tiny router for react",
   "main": "./lib/index.js",
   "scripts": {
