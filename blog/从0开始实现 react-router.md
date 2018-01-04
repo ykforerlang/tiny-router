@@ -295,10 +295,10 @@ export default class Link extends Component {
 2. 安装 `npm install tinyy-router` (注意是 tinyy 两个y，因为tiny-router已经被使用了)
 
 ### 相关文章
-[从0实现一个tiny react(一)](https://segmentfault.com/a/1190000010822571)
-[从0实现一个tinyredux](https://segmentfault.com/a/1190000011304634)
-[从0实现一个tiny react-redux](https://segmentfault.com/a/1190000011633971)
-[为什么我们需要reselect](https://segmentfault.com/a/1190000011936772)
+1. [从0实现一个tiny react(一)](https://segmentfault.com/a/1190000010822571)
+2. [从0实现一个tinyredux](https://segmentfault.com/a/1190000011304634)
+3. [从0实现一个tiny react-redux](https://segmentfault.com/a/1190000011633971)
+4. [为什么我们需要reselect](https://segmentfault.com/a/1190000011936772)
 
 
 
