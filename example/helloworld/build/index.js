@@ -3411,7 +3411,13 @@ var HelloWorld = function (_Component) {
                     )
                 ),
                 _react2.default.createElement('hr', null),
-                _react2.default.createElement(_Route2.default, { path: '/', exact: true, component: Home }),
+                _react2.default.createElement(_Route2.default, { path: '/', exact: true, render: function render() {
+                        return _react2.default.createElement(
+                            'div',
+                            null,
+                            'home'
+                        );
+                    } }),
                 _react2.default.createElement(_Route2.default, { path: '/about', component: About }),
                 _react2.default.createElement(_Route2.default, { path: '/xxx/:id', component: Xxx }),
                 _react2.default.createElement(_Route2.default, { component: NotFound })

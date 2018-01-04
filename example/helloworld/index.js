@@ -19,7 +19,7 @@ class HelloWorld extends Component {
                 </ul>
 
                 <hr />
-                    <Route path="/" exact component={Home} />
+                <Route path="/" exact render={() => (<div>home</div>)} />
                     <Route path="/about" component={About} />
                     <Route path="/xxx/:id" component={Xxx} />
                     <Route component={NotFound} />
